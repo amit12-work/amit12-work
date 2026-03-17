@@ -6,7 +6,6 @@ Currently building my personal platform at **mhaskaa.mh09**.
 ### 🛠 Tech Stack & Skills
 * **Backend:** Node.js, Python
 * **Legacy Systems:** RPG, ILE, IBM i (AS/400)
-* **Web:** Jekyll, Markdown, CSS
 * **Insights:** Data analysis and website performance optimization
 Here are some ideas to get you started:
 
