@@ -17,4 +17,4 @@ Here are some ideas to get you started:
 -->
   
 ### 📫 Connect with me:
-[LinkedIn]([your-link](https://www.linkedin.com/in/amit-mhaskar-mh094575/)) | [Email](amit12.work@gmail.com) |
+[LinkedIn](https://www.linkedin.com/in/amit-mhaskar-mh094575/)) | [Email](amit12.work@gmail.com) |
