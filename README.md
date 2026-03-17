@@ -1,16 +1,20 @@
-## Hi there 👋
+# Hey sunshine,
 
-<!--
-**amit12-work/amit12-work** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+I am a developer specializing in modern web technologies and legacy system integration. 
+Currently building my personal platform at **mhaskaa.mh09**.
 
+### 🛠 Tech Stack & Skills
+* **Backend:** Node.js, Python
+* **Legacy Systems:** RPG, ILE, IBM i (AS/400)
+* **Web:** Jekyll, Markdown, CSS
+* **Insights:** Data analysis and website performance optimization
 Here are some ideas to get you started:
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
+### 🔭 What I'm Working On
+- ✍️ Writing articles about RPG-to-Cloud transitions on my blog.
+- 🐍 Building Python automation tools for [Specific Task].
+- 🚀 Optimizing my Node.js microservices.
 -->
+  
+### 📫 Connect with me:
+[LinkedIn]([your-link](https://www.linkedin.com/in/amit-mhaskar-mh094575/)) | [Email](amit12.work@gmail.com) |
