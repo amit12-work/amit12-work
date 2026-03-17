@@ -22,12 +22,6 @@ I bridge the gap between **mission-critical IBM i systems** and the **modern web
 
 ---
 
-### 📊 GitHub Stats
-![Amit's GitHub stats](https://github-readme-stats.vercel.app/api?username=amit12-work&show_icons=true&theme=tokyonight)
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=amit12-work&layout=compact&theme=tokyonight)
-
----
-
 ### 🌐 Connect with Me
 - **Portfolio:** [Learn IBM i Way](https://amit12-work.github.io)
 - **LinkedIn:** [linkedin.com/in/amit-mhaskar-mh094575](https://linkedin.com/in/amit-mhaskar-mh094575)
