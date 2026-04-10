@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Field Details</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+
+        <div class="header-bar">
+            <span class="user">CHKFFDRG</span>
+            <span class="title">Field Details</span>
+            <span class="datetime" id="dt"></span>
+        </div>
+
+        <div class="detail-form">
+            <div class="detail-row">
+                <span class="detail-label">Library . . . . . . . . :</span>
+                <span class="detail-value"><%= detail.FLDLIB %></span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">File Name . . . . . . . :</span>
+                <span class="detail-value"><%= detail.FLDFILE %></span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">File Description. . . . :</span>
+                <span class="detail-value"><%= detail.FILEDESC %></span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Field Name. . . . . . . :</span>
+                <span class="detail-value"><%= detail.FLDNAME %></span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Field Description . . . :</span>
+                <span class="detail-value"><%= detail.FLDTEXT %></span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Field Length. . . . . . :</span>
+                <span class="detail-value"><%= detail.FLDLENGTH %> &nbsp; <%= detail.FLDTYPE %></span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Field Suffix. . . . . . :</span>
+                <span class="detail-value"><%= detail.FLDSFX %></span>
+            </div>
+        </div>
+
+        <div class="footer-bar">
+            <a href="javascript:history.back()" class="fkey">F12=Cancel</a>
+            <a href="/" class="fkey">F3=Exit</a>
+        </div>
+    </div>
+
+    <script>
+        function updateTime() {
+            const now = new Date();
+            document.getElementById('dt').textContent = now.toLocaleDateString() + ' ' + now.toLocaleTimeString();
+        }
+        updateTime();
+        setInterval(updateTime, 1000);
+    </script>
+</body>
+</html>
