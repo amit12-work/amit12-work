@@ -1,0 +1,20 @@
+{
+  "name": "nodejsdemo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "ejs": "^4.0.1",
+    "express": "^5.2.1",
+    "idb-pconnector": "^1.0.8"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
