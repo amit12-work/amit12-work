@@ -12,12 +12,16 @@
         <h2>Todo List</h2>
         <ul>
             <% if (todos?.length) { %>
-                <% todos.forEach(tod=> { %>
+                <% todos.forEach(tod => { %>
                     <li>
-                        <%= tod.DESC1 %>
+                        <span><%= tod.DESC1 %></span>
+                        <form action="/delete" method="POST" class="delete-form">
+                            <input type="hidden" name="todoDesc" value="<%= tod.DESC1 %>">
+                            <input type="submit" value="Delete" class="btn btn-delete">
+                        </form>
                     </li>
-                    <% }) %>
-                        <% } %>
+                <% }) %>
+            <% } %>
         </ul>
 
         <form id="form" action="/add" method="POST">
@@ -25,37 +29,11 @@
                 <input name="todoDesc" class="inputtext" type="text" id="text" placeholder="Add new Todo" />
                 <input type="submit" value="Add Todo" class="btn">
             </div>
-            
             <div>
-                <input type = "submit" value="Delete All" class="btn" formaction ="/deleteAll">
+                <input type="submit" value="Delete All" class="btn btn-delete" formaction="/deleteAll">
             </div>
         </form>
-
     </div>
 </body>
 
 </html>
-
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Coming from EJS </h1>
-    <%= JSON.stringify(todos) %>
-    <ul>
-      <%  for(let tod of todos){ %>
-            <li><%= tod.DESC1 %></li>
-      <%  } %>
-    </ul>
-    <form action = "/add" method="POST">
-        <input type="text" name="todoDesc" id="">
-        <button type="submit">Add Todo</button>
-    </form>
-</body>
-    
-</html> -->
