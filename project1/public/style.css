@@ -1,7 +1,6 @@
 /* Page styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f6f8;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -20,27 +19,20 @@ body {
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-/* Title */
-h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
+h2 { text-align: center; margin-bottom: 20px; }
 
-/* Todo list */
-ul {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 20px;
-}
+ul { list-style: none; padding: 0; margin-bottom: 20px; }
 
 li {
     padding: 10px;
     background: #f1f3f5;
     margin-bottom: 8px;
     border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* Input field */
 .inputtext {
     width: 65%;
     padding: 10px;
@@ -48,7 +40,6 @@ li {
     border: 1px solid #ccc;
 }
 
-/* Buttons */
 .btn {
     padding: 10px 15px;
     border: none;
@@ -59,11 +50,12 @@ li {
     margin-left: 5px;
 }
 
-.btn:hover {
-    background-color: #0056b3;
-}
+.btn:hover { background-color: #0056b3; }
 
-/* Form alignment */
-#form {
-    text-align: center;
-}
+.btn-delete { background-color: #dc3545; }
+
+.btn-delete:hover { background-color: #a71d2a; }
+
+.delete-form { margin: 0; }
+
+#form { text-align: center; }
