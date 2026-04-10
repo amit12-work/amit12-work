@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>File Field Description</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+
+        <div class="header-bar">
+            <span class="user">CHKFFDRG</span>
+            <span class="title">File Field Description</span>
+            <span class="datetime" id="dt"></span>
+        </div>
+
+        <form action="/search" method="GET" class="filter-form">
+            <div class="filter-row">
+                <label>Library:</label>
+                <input type="text" name="library" value="<%= filters.library %>"
+                       maxlength="10" class="filter-input" spellcheck="false" />
+                <label>File:</label>
+                <input type="text" name="file" value="<%= filters.file %>"
+                       maxlength="10" class="filter-input" spellcheck="false" />
+                <label>Field:</label>
+                <input type="text" name="fieldName" value="<%= filters.fieldName %>"
+                       maxlength="10" class="filter-input" spellcheck="false" />
+            </div>
+            <div class="filter-row">
+                <label>Field Desc:</label>
+                <input type="text" name="fieldDesc" value="<%= filters.fieldDesc %>"
+                       maxlength="50" class="filter-input-wide" spellcheck="false" />
+                <label>Suffix:</label>
+                <input type="text" name="suffix" value="<%= filters.suffix %>"
+                       maxlength="4" class="filter-input-xs" spellcheck="false" />
+                <button type="submit" class="btn">F5=Search</button>
+                <a href="/" class="btn btn-secondary">F3=Clear</a>
+            </div>
+        </form>
+
+        <% if (message) { %>
+            <div class="message"><%= message %></div>
+        <% } %>
+
+        <% if (searched) { %>
+        <table class="results-table">
+            <thead>
+                <tr>
+                    <th>Op</th>
+                    <th>File Name</th>
+                    <th>Field Name</th>
+                    <th>Field Desc</th>
+                    <th>SFX</th>
+                    <th>Field Length</th>
+                    <th>Type</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% results.forEach(row => { %>
+                <tr>
+                    <td>
+                        <a href="/detail?library=<%= encodeURIComponent(row.FLDLIB) %>&file=<%= encodeURIComponent(row.FLDFILE) %>&fieldName=<%= encodeURIComponent(row.FLDNAME) %>"
+                           class="opt-link" title="5=Display Details">5</a>
+                    </td>
+                    <td><%= row.FLDFILE %></td>
+                    <td><%= row.FLDNAME %></td>
+                    <td><%= row.FLDTEXT %></td>
+                    <td><%= row.FLDSFX %></td>
+                    <td><%= row.FLDLENGTH %></td>
+                    <td><%= row.FLDTYPE %></td>
+                </tr>
+                <% }) %>
+            </tbody>
+        </table>
+        <% if (results.length > 0) { %>
+            <div style="color:#555; font-size:12px; margin-top:6px;"><%= results.length %> record(s) found.</div>
+        <% } %>
+        <% } %>
+
+        <div class="footer-bar">
+            F3=Clear &nbsp;&nbsp; F5=Search &nbsp;&nbsp; Options: 5=Display
+        </div>
+    </div>
+
+    <script>
+        function updateTime() {
+            const now = new Date();
+            document.getElementById('dt').textContent = now.toLocaleDateString() + ' ' + now.toLocaleTimeString();
+        }
+        updateTime();
+        setInterval(updateTime, 1000);
+    </script>
+</body>
+</html>
