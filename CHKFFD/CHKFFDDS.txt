@@ -1,0 +1,135 @@
+     A*%%TS  SD  20201014  080542  AMHASKAR    REL-V7R3M0  5770-WDS
+     A***************************************************************
+
+     A***************************************************************
+     A*%%EC
+     A                                      DSPSIZ(24 80 *DS3)
+     A                                      PRINT
+     A*--------------------------------------------------------------------
+     A          R SCRN01S                   SFL
+     A*%%TS  SD  20201013  133044  AMHASKAR    REL-V7R3M0  5770-WDS
+     A  95                                  SFLNXTCHG
+     A            S1KEY         10S 0H      TEXT('Record key')
+     A            SVFLDDESC     50A  H      TEXT('Hidden Field Desc')
+     A            S1SEL          1A  B  8  2TEXT('Selection Option')
+     A                                      DSPATR(PC)
+     A                                      DSPATR(UL)
+     A  90                                  DSPATR(PR)
+     A            S1FILENAME    10A  O  8  4
+     A            S1FLDNAME     10A  O  8 16
+     A            S1FLDDESC     20A  O  8 28
+     A            S1FLDSFX       4A  O  8 50
+     A            S1FLDDIGIT    10A  O  8 56
+     A            S1FLDTYPE     10A  O  8 67
+     A*--------------------------------------------------------------------
+     A          R SCRN01C                   SFLCTL(SCRN01S)
+     A*%%TS  SD  20201014  080542  AMHASKAR    REL-V7R3M0  5770-WDS
+     A                                      SFLSIZ(0014)
+     A                                      SFLPAG(0013)
+     A                                      CF03
+     A                                      CF05
+     A                                      CF12
+     A  92                                  PAGEUP
+     A  94                                  PAGEDOWN
+     A                                      OVERLAY
+     A  93N96                               SFLDSP
+     A  93                                  SFLDSPCTL
+     A N93                                  SFLCLR
+     A  96                                  SFLINZ
+     A N94                                  SFLEND(*MORE)
+     A            S1RCD          4S 0H      SFLRCDNBR
+     A                                  1  2USER
+     A                                      DSPATR(HI)
+     A                                  1 29'STEEL TECHNOLOGIES INC.'
+     A                                      DSPATR(HI)
+     A            S1MODE         7A  O  1 60TEXT('Program Entry Mode')
+     A                                      COLOR(RED)
+     A                                  1 72DATE
+     A                                      EDTCDE(Y)
+     A                                      DSPATR(HI)
+     A                                  2 72TIME
+     A                                  2  2'CHKFFDRG'
+     A                                  2 30'File Field Description'
+     A                                  3  2'Library:'
+     A                                      COLOR(PNK)
+     A            SFLIBRARY     10A  B  3 12COLOR(PNK)
+     A                                      DSPATR(HI)
+     A                                  5  2'Options:'
+     A                                      COLOR(BLU)
+     A            S1OPTS        40A  O  5 11TEXT('Screen-1 Options Available')
+     A                                      COLOR(BLU)
+     A            SFFILE        10A  B  6  4COLOR(PNK)
+     A            SFFIELD       10A  B  6 16COLOR(PNK)
+     A            SFFLDDESC     20A  B  6 28COLOR(PNK)
+     A                                      CHECK(LC)
+     A            SFSUFX         4A  B  6 50COLOR(PNK)
+     A                                  7  1'Op'
+     A                                      DSPATR(HI)
+     A                                      DSPATR(UL)
+     A                                  7  4'File Name'
+     A                                      DSPATR(UL)
+     A                                      COLOR(WHT)
+     A                                  7 16'Field Name'
+     A                                      DSPATR(UL)
+     A                                      COLOR(WHT)
+     A                                  7 28'Field Desc'
+     A                                      DSPATR(UL)
+     A                                      COLOR(WHT)
+     A                                  7 50'SFX'
+     A                                      DSPATR(UL)
+     A                                      COLOR(WHT)
+     A                                  7 56'Field Length'
+     A                                      DSPATR(UL)
+     A                                      COLOR(WHT)
+     A*--------------------------------------------------------------------
+     A          R SCRN01R
+     A                                 22  2'F3=Exit'
+     A                                      COLOR(BLU)
+     A                                 22 11'F5=Refresh'
+     A                                      COLOR(BLU)
+     A                                 22 23'F12=Cancel'
+     A                                      COLOR(BLU)
+     A            S1MSG         75A  O 23  2TEXT('Screen-1 Error Message')
+     A                                      DSPATR(HI)
+     A*--------------------------------------------------------------------
+     A          R SCRN02
+     A*%%TS  SD  20201013  141321  AMHASKAR    REL-V7R3M0  5770-WDS
+     A                                      CF03
+     A                                      CF07
+     A                                      CF12
+     A                                      OVERLAY
+     A                                  1  2USER
+     A                                      DSPATR(HI)
+     A                                  1 29'STEEL TECHNOLOGIES INC.'
+     A                                      DSPATR(HI)
+     A            S2MODE         7A  O  1 60TEXT('Program Entry Mode')
+     A                                      COLOR(RED)
+     A                                  1 72DATE
+     A                                      EDTCDE(Y)
+     A                                      DSPATR(HI)
+     A                                  2 34'Field Details'
+     A                                  2 72TIME
+     A                                      DSPATR(HI)
+     A                                  5  3'Library . . . . . . . . :'
+     A            S2LIBRARY     10A  O  5 31COLOR(WHT)
+     A                                  7  3'File Name . . . . . . . :'
+     A            S2FILENAME    10A  O  7 31COLOR(WHT)
+     A                                  9  3'File Description. . . . :'
+     A            S2FILEDESC    50A  O  9 31COLOR(WHT)
+     A                                 11  3'Field Name. . . . . . . :'
+     A            S2FLDNAME     10A  O 11 31COLOR(WHT)
+     A                                 13  3'Field Description . . . :'
+     A            S2FLDDESC     50A  O 13 31COLOR(WHT)
+     A                                 15  3'Field Length. . . . . . :'
+     A            S2FLDDIGIT    10A  O 15 31COLOR(WHT)
+     A            S2FLDTYPE     10A  O 15 42COLOR(WHT)
+     A****        S2LENGTH      18A  O 15 40COLOR(WHT)
+     A                                 17  3'Field Suffix. . . . . . :'
+     A            S2FLDSFX       4A  O 17 31COLOR(WHT)
+     A                                 22  2'F3=Exit'
+     A                                      COLOR(BLU)
+     A                                 22 12'F12=Cancel'
+     A                                      COLOR(BLU)
+     A            S2MSG         75A  O 23  2TEXT('Screen-2 Error Message')
+     A                                      DSPATR(HI)
+
